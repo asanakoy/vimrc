@@ -4,6 +4,9 @@ set -e
 cp ~/.vimrc ~/.vimrc.bak
 
 cd ~/.vim_runtime
+
+vundle_dir=plugins/Vundle.vim
+[ -d "${vundle_dir}" ] && rm -rf "${vundle_dir}"
 git clone https://github.com/VundleVim/Vundle.vim.git plugins/Vundle.vim
 
 echo 'set runtimepath+=~/.vim_runtime

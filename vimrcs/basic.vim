@@ -156,7 +156,10 @@ set background=dark
 "colorscheme distinguished
 "colorscheme dzo
 " colorscheme zenburn
-colorscheme peaksea
+try
+    colorscheme peaksea
+catch
+endtry
 
 set encoding=utf-8
 
