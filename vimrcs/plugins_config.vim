@@ -4,6 +4,9 @@ call vundle#begin('~/.vim_runtime/plugins/')
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'vim-scripts/taglist.vim'
 "Bundle 'Valloric/YouCompleteMe
 "Plugin 'https://github.com/vim-syntastic/syntastic' "syntax and style checker
 Plugin 'jnurmine/Zenburn'
@@ -59,4 +62,19 @@ let g:pymode_lint_ignore = "F401, E501"
 let g:ycm_autoclose_preview_window_after_completion=1
 "map <C-g>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+"""""""""""""""""""""""""""""
+" TagList Plugin Configuration
+"""""""""""""""""""""""""""""
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_File_Fold_Auto_Close = 1
+map <C-m> :TlistToggle<CR>
 
+"""""""""""""""""""""""""""""
+" Easytags
+"""""""""""""""""""""""""""""
+" Let Vim walk up directory hierarchy from CWD to root looking for tags file
+set tags=tags;/
+" Tell EasyTags to use the tags file found by Vim
+let g:easytags_dynamic_files = 1
