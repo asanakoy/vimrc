@@ -143,11 +143,11 @@ let python_highlight_all=1
 syntax on
 
 "let g:solarized_termcolors=16
-"set t_Co=256
+set t_Co=256
 " Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+"if $COLORTERM == 'gnome-terminal'
+"    set t_Co=256
+"endif
 
 " Set colorscheme and background
 set background=dark
