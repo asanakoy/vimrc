@@ -231,9 +231,9 @@ set splitright
 "   make: call 'makeprg', which is make by default
 "   %:r: root of the current filename (extension removed)
 "   <CR>: execute all this
-nmap <F5> :<C-U>!g++ % -std=c++11 -o2 -o %:r && ./%:r<CR>
-nmap <F6> :<C-U>!g++ -DHOME % -std=c++11 -o2 -o %:r.o2 && ./%:r.o2<CR>
-nmap <F7> :<C-U>!g++ -DHOME -g % -o %:r.g && ./%:r.g<CR>
+nmap <F5> :<C-U>!g++ % -std=c++17 -o2 -o %:r && ./%:r<CR>
+nmap <F6> :<C-U>!g++ -DHOME % -std=c++17 -o2 -o %:r.o2 && ./%:r.o2<CR>
+nmap <F7> :<C-U>!g++ -DHOME -g % -std=c++17 -o %:r.g && ./%:r.g<CR>
 autocmd FileType python nnoremap <F9> :<C-U>!python %<CR>
 
 set pastetoggle=<F4>
