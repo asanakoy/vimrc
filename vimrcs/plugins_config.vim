@@ -69,7 +69,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
-map <C-m> :TlistToggle<CR>
+map <C-q> :TlistToggle<CR>
 
 """""""""""""""""""""""""""""
 " Easytags
@@ -78,3 +78,4 @@ map <C-m> :TlistToggle<CR>
 set tags=tags;/
 " Tell EasyTags to use the tags file found by Vim
 let g:easytags_dynamic_files = 1
+let g:easytags_async = 1
