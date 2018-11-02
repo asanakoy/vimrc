@@ -13,7 +13,7 @@ set visualbell
 
 "" РАБОТА С ФАЙЛАМИ
 " Add the unnamed register to the clipboard
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 " Список кодировок файлов для автоопределения
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 
