@@ -1,7 +1,9 @@
 #!/bin/sh
 set -e
 
-cp ~/.vimrc ~/.vimrc.bak
+if [[ -f ~/.vimrc ]]; then
+    cp ~/.vimrc ~/.vimrc.bak
+fi
 
 cd ~/.vim_runtime
 
