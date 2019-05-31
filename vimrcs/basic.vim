@@ -295,9 +295,15 @@ endif
 " => Turn persistent undo on 
 "    means that you can undo even when you close a buffer/VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" persistent undo
+if !isdirectory($HOME."/.vim_runtime/temp_dirs/undodir")
+    call mkdir($HOME."/.vim_runtime/temp_dirs/undodir")
+endif
 try
     set undodir=~/.vim_runtime/temp_dirs/undodir
     set undofile
+    set undolevels=1000 "maximum number of changes that can be undone
+    set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 catch
 endtry
 
