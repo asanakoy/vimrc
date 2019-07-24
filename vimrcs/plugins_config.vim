@@ -19,7 +19,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'https://github.com/Blevs/vim-dzo'
 "Plugin 'https://github.com/wincent/command-t'
 "Plugin 'klen/python-mode'
-
+Plugin 'christoomey/vim-tmux-navigator' " ctr+hjkl navigation between splits
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
