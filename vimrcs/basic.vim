@@ -290,8 +290,8 @@ endif
 "    means that you can undo even when you close a buffer/VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " persistent undo
-if !isdirectory($HOME"/.vim_runtime/temp_dirs/undodir")
-    call mkdir($HOME"/.vim_runtime/temp_dirs/undodir")
+if !isdirectory($HOME."/.vim_runtime/temp_dirs/undodir")
+    call mkdir($HOME."/.vim_runtime/temp_dirs/undodir")
 endif
 try
     set undodir=~/.vim_runtime/temp_dirs/undodir
