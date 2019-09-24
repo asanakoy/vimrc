@@ -33,6 +33,7 @@ autocmd StdinReadPre * let s:std_in=1
 "autostart NerdTree
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeFind<CR>
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
