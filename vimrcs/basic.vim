@@ -210,6 +210,8 @@ function! GotoJump()
 endfunction
 nmap <Leader>j :call GotoJump()<CR>
 
+" CD = Change to Directory of Current file
+command CD cd %:p:h
 
 " open new splits down and to the right
 set splitbelow
