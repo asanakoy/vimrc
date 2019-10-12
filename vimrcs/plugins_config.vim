@@ -21,12 +21,24 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'klen/python-mode'
 Plugin 'christoomey/vim-tmux-navigator' " ctr+hjkl navigation between splits
 
+" Install FZF
+set rtp+=~/.local/opt/fzf
+Plugin 'junegunn/fzf.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " Enable filetype plugins
 filetype plugin on
 filetype plugin indent on    " required
 
+""" Vim Skin 
+"colorscheme distinguished
+"colorscheme dzo
+" colorscheme zenburn
+try
+    colorscheme peaksea
+catch
+endtry
 
 "NERD Tree settings
 autocmd StdinReadPre * let s:std_in=1
@@ -81,6 +93,14 @@ let g:ale_list_window_size = 5
 
 let g:ycm_autoclose_preview_window_after_completion=1
 "map <C-g>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"""""""""""""""""""""""""""""
+" FZF Plugin configuration
+"""""""""""""""""""""""""""""
+nmap <leader>s :vs<cr>:Files<cr>
+nmap <leader>i :split<cr>:Files<cr>
+nmap <leader>f :Files<cr>
+command F :Files
 
 """""""""""""""""""""""""""""
 " TagList Plugin Configuration

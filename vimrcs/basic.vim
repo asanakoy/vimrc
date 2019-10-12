@@ -153,13 +153,6 @@ set t_Co=256
 set background=dark
 
 
-"colorscheme distinguished
-"colorscheme dzo
-" colorscheme zenburn
-try
-    colorscheme peaksea
-catch
-endtry
 
 set encoding=utf-8
 
@@ -293,6 +286,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " persistent undo
 if !isdirectory($HOME."/.vim_runtime/temp_dirs/undodir")
+    call mkdir($HOME."/.vim_runtime/temp_dirs")
     call mkdir($HOME."/.vim_runtime/temp_dirs/undodir")
 endif
 try
