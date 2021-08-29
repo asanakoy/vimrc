@@ -1,5 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 set -e
+
+#Install ctags
+sudo apt-get install -y exuberant-ctags
+
+if [[ ! -f ~/.config/nvim/init.vim ]]; then
+    # neovim reads vimrc from ~/.config/nvim/init.vim
+    mkdir -p ~/.conf/nvim
+    echo 'source ~/.vimrc' > ~/.config/nvim/init.vim
+fi
 
 if [[ -f ~/.vimrc ]]; then
     cp ~/.vimrc ~/.vimrc.bak
