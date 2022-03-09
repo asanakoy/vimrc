@@ -5,13 +5,15 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'vim-scripts/taglist.vim'
+Plugin 'xolox/vim-easytags' "Requires exuberant-ctags package
+Plugin 'vim-scripts/taglist.vim' "Requires exuberant-ctags package
 "Bundle 'Valloric/YouCompleteMe
 "Plugin 'https://github.com/vim-syntastic/syntastic' "syntax and style checker
 Plugin 'w0rp/ale' " Check syntax (linting) and fix files asynchronously, with Language Server Protocol (LSP) integration in Vim . Requires NeoVim 0.2.0+ or Vim 8 
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-scripts/peaksea'
+Plugin 'https://github.com/tomasr/molokai'
+Plugin 'tomasiser/vim-code-dark'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -20,6 +22,8 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'https://github.com/wincent/command-t'
 "Plugin 'klen/python-mode'
 Plugin 'christoomey/vim-tmux-navigator' " ctr+hjkl navigation between splits
+Plugin 'https://github.com/bfrg/vim-cuda-syntax' " cuda syntax highlight
+Plugin 'https://github.com/bfrg/vim-cpp-modern' " Keyword and regex-based syntax highlighting for C and C++11/14/17/20
 
 " Install FZF
 set rtp+=~/.local/opt/fzf
@@ -31,12 +35,21 @@ call vundle#end()            " required
 filetype plugin on
 filetype plugin indent on    " required
 
+" Cuda highlight syntax options
+" Highlight kernel calls in <<< >>>>
+let g:cuda_kernel_highlight = 1
+
 """ Vim Skin 
 "colorscheme distinguished
 "colorscheme dzo
 " colorscheme zenburn
+" set rtp+=~/.vim_runtime/plugins/my-onedark " for custonly installed my-onedark colorscheme from https://gist.githubusercontent.com/bfrg/dc149d1b797dd65502db38b1d76b5edd/raw/f75376c5affa38f3745ee0bf23ec2092a9aa757e/onedark.vim
+" colorscheme onedark
+
 try
     colorscheme peaksea
+    "colorscheme molokai
+    "colorscheme codedark
 catch
 endtry
 
