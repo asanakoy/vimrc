@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-#Install ctags
-sudo apt-get install -y exuberant-ctags
+# Install ctags
+[ -x "$(command -v apt-get)" ]  && sudo apt-get install -y exuberant-ctags
 
 if [[ ! -f ~/.config/nvim/init.vim ]]; then
     # neovim reads vimrc from ~/.config/nvim/init.vim
-    mkdir -p ~/.conf/nvim
+    mkdir -p ~/.config/nvim
     echo 'source ~/.vimrc' > ~/.config/nvim/init.vim
 fi
 
